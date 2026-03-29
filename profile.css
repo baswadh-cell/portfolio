@@ -1,0 +1,218 @@
+/* Google Fonts already added */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #0ea5e9, #38bdf8);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header Animation */
+header {
+  padding: 50px 20px;
+  animation: dropDown 1s ease;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 42px;
+  color: #38bdf8;
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Navbar */
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+/* About Animation (fade) */
+#about {
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Skills Animation (slide left) */
+#skills {
+  animation: slideLeft 1.5s ease;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Skills Style */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  font-family: 'Fira Code', monospace;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+
+/* Skill Colors */
+.python { background: #3776AB; }
+.cpp { background: #00599C; }
+.html { background: #E34F26; }
+.css { background: #1572B6; }
+.js { background: #F7DF1E; color: black; }
+.git { background: #F05032; }
+
+/* Projects Animation (zoom) */
+#projects {
+  animation: zoomIn 1.5s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Project Card */
+.project {
+  background: rgba(255, 255, 255, 0.08);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+}
+
+/* Contact Animation (slide up) */
+#contact {
+  animation: slideUp 1.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Contact Icons */
+.contact-icons a {
+  margin: 0 15px;
+  font-size: 30px;
+  color: #38bdf8;
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  color: white;
+  transform: scale(1.3);
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #38bdf8;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
